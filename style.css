@@ -1,0 +1,54 @@
+* {
+	box-sizing:border-box;
+}
+body {
+	background-color: lightslategray;
+	font-family: Arial;
+	color:#34495e;
+	font-size: 18px;
+}
+ul {
+    padding-left: 20px;
+    margin: 0;
+}
+.tabs {
+	width: 80%;
+	margin: 100px auto;
+	max-width:600px;
+}
+label {
+    cursor:pointer;
+    float: left;
+    margin-right: 5px;
+    display: block;
+    padding: 10px 40px;
+    background-color: #ecf0f1;
+    border-radius: 5px 5px 0 0;
+}
+input {
+    display: none;
+}
+input:checked + label {
+    background-color: lightseagreen;
+    color: ghostwhite;
+}	
+input[id="tab1"]:checked ~ .content .t1,
+input[id="tab2"]:checked ~ .content .t2,
+input[id="tab3"]:checked ~ .content .t3{
+    display: block;
+}
+.content {
+    clear:both;
+    position: relative;
+}
+.content div {
+    width: 100%;
+    padding: 30px;
+    position: absolute;
+    background-color: #fff;
+    display: none;
+    min-height: 200px;		
+    border-top:5px solid lightseagreen;
+    border-radius:0 5px 5px 5px;
+    box-shadow: 20px 20px 30px -15px black;
+}
