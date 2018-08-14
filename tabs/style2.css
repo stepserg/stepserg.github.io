@@ -1,0 +1,39 @@
+body {
+    background: lightblue;
+}
+#tab > input {
+    display: none;
+}
+#tab > label {
+    cursor: pointer;
+    display: block;
+    float:left;
+    padding: 5px 10px;
+    background: skyblue;
+    margin-right: 5px;
+}
+#tab {
+    width: 250px;
+    margin: 20px;
+}
+#table {
+    clear: both;
+    position: relative;
+}
+#table > div {
+    background: skyblue;
+    position: absolute;
+    padding: 15px;
+    width: 250px;
+    opacity: 0.1;
+    overflow: hidden;
+}
+
+#n1:checked ~ #table > div:nth-of-type(1),
+#n2:checked ~ #table > div:nth-of-type(2),
+#n3:checked ~ #table > div:nth-of-type(3) {opacity: 1;}
+
+#tab > input:checked + label {
+    color: #333;
+    background: #fff;
+}
